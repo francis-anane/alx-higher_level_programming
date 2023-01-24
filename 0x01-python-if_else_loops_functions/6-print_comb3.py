@@ -6,4 +6,4 @@ for i in range(48, 58):
             if j == 57 and i == 56:
                 break
             print(",".format(), end=" ")
-print("\n".format())
+print("".format())
