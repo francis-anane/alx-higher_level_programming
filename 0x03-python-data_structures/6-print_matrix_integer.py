@@ -4,10 +4,10 @@ def print_matrix_integer(matrix=[[]]):
 
     """ This function prints a matrix of integers. """
 
-    for l in matrix:
+    for mat in matrix:
         idx = 0
-        for i in l:
-            if idx < len(l) - 1:
+        for i in mat:
+            if idx < len(mat) - 1:
                 print("{:d}".format(i), end=" ")
             else:
                 print("{:d}".format(i), end="")

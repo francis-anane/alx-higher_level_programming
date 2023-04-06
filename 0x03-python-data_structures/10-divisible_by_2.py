@@ -5,7 +5,6 @@ def divisible_by_2(my_list=[]):
     """ This function finds all multiples of 2 in a list.
     """
 
-
     llen = len(my_list)
     if llen == 0:
         return (None)
