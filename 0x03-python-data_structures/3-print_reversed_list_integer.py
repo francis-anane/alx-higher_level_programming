@@ -4,7 +4,7 @@ def print_reversed_list_integer(my_list=[]):
 
     """ This function prints a list of integers in reverse order. """
 
-    if my_list == None:
+    if my_list is None:
         return None
     idx = len(my_list) - 1
     while idx >= 0:
