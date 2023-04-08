@@ -4,6 +4,7 @@
  */
 
 #include "lists.h"
+
 /**
  * is_palindrome - checks if a singly linked list is a palindrome.
  * @head: The pointer to the head node of the list.
@@ -12,35 +13,32 @@
 
 int is_palindrome(listint_t **head)
 {
-	listint_t *chk_nodes, *node;
+	listint_t *chk_nodes, *node, *start, *end;
 	int chk = 1, index;
 	int size = listint_len(*head);
-	listint_t **tmp;
 
 	if (size == 0)
 		return (1);
-	tmp = malloc(size * sizeof(listint_t));
-	if (tmp == NULL)
-		return (0);
-	index = size - 1;
-	chk_nodes = node = *head;
+	index = 0;
+	start = chk_nodes = node = *head;
 	while (node != NULL)
 	{
-		tmp[index] = node;
+		if (index == size - 1)
+		{
+			end = node;
+			if (end->n != chk_nodes->n)
+			{
+				chk = 0;
+				break;
+			}
+			index = 0;
+			size--;
+			chk_nodes = chk_nodes->next;
+			node = start;
+		}
 		node = node->next;
-		index--;
-	}
-	index = 0;
-	while (chk_nodes != NULL)
-	{
-		if (tmp[index]->n != chk_nodes->n)
-			chk = 0;
-		chk_nodes = chk_nodes->next;
 		index++;
 	}
-	free(tmp);
-	tmp = NULL;
-
 	return (chk);
 }
 
