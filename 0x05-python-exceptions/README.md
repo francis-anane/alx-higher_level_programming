@@ -1,0 +1,1 @@
+# My alx project work 0x05. Python - Exceptions
