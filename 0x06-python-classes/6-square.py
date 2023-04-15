@@ -25,8 +25,9 @@ an integer.
         else:
             self.__size = size
 
-        if not type(position) == tuple\
-           and position[0] >= 0 and position[1] >= 0:
+        if (not type(position) == tuple) or (not len(position) == 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif (not position[0] >= 0) or (not position[1] >= 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = position
@@ -71,7 +72,9 @@ an integer.
     @position.setter
     def position(self, value):
         """ Sets the position value """
-        if not type(value) == tuple and value[0] >= 0 and value[1] >= 0:
+        if (not type(value) == tuple) or (not len(value) == 2):
+            raise TypeError("position must be a tuple of 2 positive integers")
+        elif not value[0] >= 0 and not value[1] >= 0:
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value

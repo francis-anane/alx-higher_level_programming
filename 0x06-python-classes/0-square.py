@@ -3,5 +3,4 @@
 
 
 class Square:
-    pass
     """ This class defines a square """
