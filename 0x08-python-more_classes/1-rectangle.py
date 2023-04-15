@@ -50,7 +50,7 @@ class Rectangle:
     def height(self):
         """ Gets the height value """
 
-        return self.__hight
+        return self.__height
 
     @height.setter
     def height(self, value):
