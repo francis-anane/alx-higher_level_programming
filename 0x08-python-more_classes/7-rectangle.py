@@ -96,7 +96,7 @@ class Rectangle:
             rect = ""
             h = self.__height
             while h > 0:
-                rect += str((self.print_symbol * self.__width))
+                rect += f"{str(self.print_symbol) * self.__width}"
                 h -= 1
                 if h != 0:
                     rect += "\n"
