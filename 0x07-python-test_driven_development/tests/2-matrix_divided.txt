@@ -5,8 +5,10 @@
 [[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
 >>> matrix_divided(matrix, 10)
 [[0.1, 0.2, 0.3], [0.4, 0.5, 0.6]]
->>> matrix_divided([[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]], float("inf"))
+>>> matrix_divided([[77, 36, 15], [10, 34, 89]], float("inf"))
 [[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+>>> matrix_divided([[77, 36, 15], [10, 34, 89]], -float("inf"))
+[[-0.0, -0.0, -0.0], [-0.0, -0.0, -0.0]]
 >>> try:
 ...     matrix_divided(matrix, 0)
 ... except Exception as e:
