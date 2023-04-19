@@ -22,13 +22,13 @@ div must be a number
 ... except Exception as e:
 ...     print(e)
 ...
-matrix must be a matrix(list of lists) of integers/floats
+matrix must be a matrix (list of lists) of integers/floats
 >>> try:
 ...     matrix_divided([4, 3, 5], 2)
 ... except Exception as e:
 ...     print(e)
 ...
-matrix must be a matrix(list of lists) of integers/floats
+matrix must be a matrix (list of lists) of integers/floats
 >>> matrix.append([9, 3, 8, 7])
 >>> try:
 ...	matrix_divided(matrix, 10)
