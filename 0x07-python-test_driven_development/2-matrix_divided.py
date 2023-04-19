@@ -39,7 +39,12 @@ def matrix_divided(matrix, div):
             elif len(m) != len_0:
                 raise TypeError(type_err2)
             else:
-                element = [round(e / div, 2) for e in m]
-                new_matrix.append(element)
+                element = []
+                for e in m:
+                    if type(e) in [int, float]:
+                        element.append(round(e / div, 2))
+                    else:
+                        raise TypeError(type_err)
+            new_matrix.append(element)
 
         return new_matrix
