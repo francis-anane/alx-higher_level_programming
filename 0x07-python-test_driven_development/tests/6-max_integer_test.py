@@ -46,3 +46,11 @@ class TestMaxInteger(unittest.TestCase):
         """ Test that 1000000000 is the maximum integer """
 
         self.assertEqual(max_integer([1000000000, 100000, 10000]), 1000000000)
+
+    def test_empty(self):
+        """ Test empty list """
+        self.assertIsNone(max_integer([]), None)
+
+    def test_None(self):
+        """ Test None """
+        self.assertIsNone(max_integer(), None)

@@ -5,7 +5,7 @@ My name is John Smith
 >>> say_my_name("Walter", "White")
 My name is Walter White
 >>> say_my_name("Bob")
-My name is Bob
+My name is Bob 
 >>> try:
 ...	say_my_name("Walter", 9)
 ... except Exception as e:
@@ -25,12 +25,18 @@ last_name must be a string
 ...
 first_name must be a string
 >>> try:
+...     say_my_name(None)
+... except Exception as e:
+...     print(e)
+...
+first_name must be a string
+>>> try:
 ...     say_my_name(None, "Smith")
 ... except Exception as e:
 ...     print(e)
 ...
 first_name must be a string
 >>> say_my_name("Francis")
-My name is Francis
+My name is Francis 
 
 """
