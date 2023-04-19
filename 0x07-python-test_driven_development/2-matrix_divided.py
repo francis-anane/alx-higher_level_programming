@@ -20,7 +20,7 @@ def matrix_divided(matrix, div):
     """
 
     # type_error messages for matrix data type
-    type_err = "matrix must be a matrix(list of lists) of integers/floats"
+    type_err = "matrix must be a matrix (list of lists) of integers/floats"
     type_err2 = "Each row of the matrix must have the same size"
     if type(matrix) != list:
         raise TypeError(type_err)
