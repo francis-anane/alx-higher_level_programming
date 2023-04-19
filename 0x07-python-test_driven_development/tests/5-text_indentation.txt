@@ -1,0 +1,42 @@
+>>> import doctest
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation(" H. e?l:l. o: w?o:r:l? d")
+H.
+<BLANKLINE>
+e?
+<BLANKLINE>
+l:
+<BLANKLINE>
+l.
+<BLANKLINE>
+o:
+<BLANKLINE>
+w?
+<BLANKLINE>
+o:
+<BLANKLINE>
+r:
+<BLANKLINE>
+l?
+<BLANKLINE>
+d
+>>> try:
+...	text_indentation(9)
+... except Exception as e:
+... 	print(e)
+...
+text must be a string
+>>> try:
+...     text_indentation(None)
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+>>> try:
+...     text_indentation([1, 2, 5])
+... except Exception as e:
+...     print(e)
+...
+text must be a string
+
+"""
