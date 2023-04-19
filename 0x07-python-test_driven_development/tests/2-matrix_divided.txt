@@ -36,5 +36,17 @@ matrix must be a matrix (list of lists) of integers/floats
 ... 	print(e)
 ...
 Each row of the matrix must have the same size
+>>> try:
+...     matrix_divided([[2, 4, 5], [12, "34", 7], [9, 34, 54]], 4)
+... except Exception as e:
+...     print(e)
+...
+matrix must be a matrix (list of lists) of integers/floats
+>>> try:
+...     matrix_divided([[2, 4, 5], [12, 34, 7], [9, 34, 54]], "4")
+... except Exception as e:
+...     print(e)
+...
+div must be a number
 
 """
