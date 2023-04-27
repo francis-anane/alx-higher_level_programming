@@ -19,5 +19,15 @@
 [4, 2, 3]
 >>> len(my_list)
 3
+>>> my_list.append(-1)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -1, 2, 3, 4]
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[-5, -1, 0, 2, 3, 4]
+>>> my_list.clear()
+>>> my_list.print_sorted()
+[]
 
 """
