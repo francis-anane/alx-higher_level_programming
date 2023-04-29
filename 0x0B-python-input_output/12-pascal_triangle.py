@@ -11,8 +11,10 @@ def pascal_triangle(n):
     """
     if n <= 0:
         return []
-    if n == 1:
-        return [1]
+    elif n == 1:
+        return [[1]]
+    elif n == 2:
+        return [[1], [1, 1]]
 
     triangle = [[1], [1, 1]]  # first two rows of triangle list
     idx = 1
