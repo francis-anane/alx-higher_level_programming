@@ -36,9 +36,6 @@ class Student:
         Args:
             json (dict): The data to replace with
         """
-        try:
-            self.first_name = json["first_name"]
-            self.last_name = json["last_name"]
-            self.age = json["age"]
-        except KeyError:
-            print("Invalid data for student")
+        self.first_name = json["first_name"]
+        self.last_name = json["last_name"]
+        self.age = json["age"]
