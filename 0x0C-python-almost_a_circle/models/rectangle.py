@@ -17,7 +17,7 @@ class Rectangle(Base):
             height (int): The height of the Rectangle
             x (int): rectangle point x
             y (int): rectangle point y
-            id (int): Rectangle object id
+            id (int): Rectangle objectq id
         """
 
         self.__int_err = " must be an integer"  # int requirement err msg
@@ -131,12 +131,17 @@ class Rectangle(Base):
             print(x_symbol + "#" * self.__width)
             h -= 1
 
+    @property
+    def int_err(self):
+        """Return int_err string"""
+
+        return self.__int_err
+
     def __str__(self):
         """Return string representation of Rectangle"""
 
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} -\
  {self.__width}/{self.__height}"
-
 
     def update(self, *args, **kwargs):
         """Update the Rectangle
@@ -201,3 +206,9 @@ class Rectangle(Base):
                     elif args[i] < 0:
                         raise ValueError("y must be >= 0")
                     self.__y = args[i]
+
+    def to_dictionary(self):
+        """Return dictionary representation of Rectangle"""
+
+        return {"id": self.id, "width": self.__width, "height": self.__height,
+                "x": self.__x, "y": self.__y}
