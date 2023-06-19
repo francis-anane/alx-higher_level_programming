@@ -13,9 +13,9 @@ if __name__ == "__main__":
     cur = conn.cursor()
     cur.execute("""SELECT cities.name FROM
                 cities INNER JOIN states ON states.id=cities.state_id WHERE
-states.name=%s""", (argv[4], ))
+states.name=%s""", (argv[4],))
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    row = list(row[0] for row in rows)
+    print(*row, sep=", ")
     cur.close()
     conn.close()
