@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """module defines remove_char_at"""
 
+
 def remove_char_at(str, n):
     """Makes a copy of a string by removing character at index n.
     Attribute:
