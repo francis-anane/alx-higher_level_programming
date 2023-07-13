@@ -1,5 +1,8 @@
-#include <stdio.h>
 #include <Python.h>
+#include <bytesobject.h>
+#include <stdio.h>
+void print_python_bytes(PyObject *p);
+void print_python_list(PyObject *p);
 
 /**
  * print_python_list - Prints some basic information about python list objects
