@@ -10,22 +10,21 @@ if (process.argv.length === 3) {
   request.get(url, (err, response, body) => {
     if (!err) {
       const todos = JSON.parse(body);
-      const completed = []; // To store completed todo by users
-      const userIds = {}; // Store User ids and the number of completed tasks
+      const completed = {}; // To store user id and number of completed todos by user id
       for (let i = 0; i < todos.length; i++) {
         if (todos[i].completed === true) {
-          completed.push(todos[i]); // update list of completed tasks
+          //console.log(todos[i]);
+          const uid = todos[i].userId;
+          if (uid in completed){
+             completed[uid]++; // update of completed tasks
+          } else {
+            completed[uid] = 1;
+          }
+
+
         }
       }
-      for (let i = 0; i < completed.length; i++) {
-        const uid = completed[i].userId.toString();
-        if (uid in userIds) {
-          userIds[uid]++; // Increment tasks completed by user id
-        } else {
-          userIds[uid] = 1; // Add new id and completed task
-        }
-      }
-      console.log(userIds);
+      console.log(completed);
     }
   });
 }
