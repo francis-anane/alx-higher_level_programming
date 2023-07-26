@@ -13,12 +13,10 @@ if (process.argv.length === 3) {
       const completed = {}; // To store user id and number of completed todos by user id
       for (let i = 0; i < todos.length; i++) {
         if (todos[i].completed === true) {
-          // console.log(todos[i]);
-          const uid = todos[i].userId;
-          if (uid in completed) {
-            completed[uid]++; // update of completed tasks
+          if (completed[todos[i].userId] !== undefined) {
+            completed[todos[i].userId]++; // update of completed tasks
           } else {
-            completed[uid] = 1;
+            completed[todos[i].userId] = 1;
           }
         }
       }
