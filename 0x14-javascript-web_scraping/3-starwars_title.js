@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-/* Display the title of a star wars movie based on epesode number passed as cli arg */
+/* Display the title of a star wars movie based on the epesode number passed as cli arg */
 
 const request = require('request'); // import request module
 const url = 'https://swapi-api.alx-tools.com/api/films/'; // Star wars api url by alx
