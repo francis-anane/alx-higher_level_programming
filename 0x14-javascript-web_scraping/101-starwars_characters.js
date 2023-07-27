@@ -15,8 +15,7 @@ if (process.argv.length === 3) {
         // Make an http Get request to people
         request.get(characters[url], (err, response, body) => {
           if (!err) {
-            const character = JSON.parse(body);
-            console.log(character.name);
+            console.log(JSON.parse(body).name);
           }
         });
       }
